@@ -23,3 +23,5 @@
 100-write.py - Prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, followed by a new line.
 
 101-compile - Compiles a Python script file.
+
+102-magic_calculation.py - Python function def magic_calculation(a, b) that solves a exponential b and add the result to 98

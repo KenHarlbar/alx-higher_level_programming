@@ -19,3 +19,5 @@
 9-easter_egg.py - Prints “The Zen of Python”, by TimPeters, followed by a new line
 
 10-check_cycle.c - Checks if there is a cycle in a linked list
+
+100-write.py - Prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, followed by a new line.

@@ -21,3 +21,5 @@
 10-check_cycle.c - Checks if there is a cycle in a linked list
 
 100-write.py - Prints exactly and that piece of art is useful - Dora Korpar, 2015-10-19, followed by a new line.
+
+101-compile - Compiles a Python script file.

@@ -13,3 +13,5 @@
 6-concat.py - Complete a source code to print Welcome to Holberton School!
 
 7-edges.py - Print the first 3 letters, the last 2 letters and the middle word of a word in a source code
+
+8-concat_edges.py - Print a part of a string

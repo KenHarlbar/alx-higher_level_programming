@@ -11,3 +11,5 @@
 5-print_string.py - Complete a source code in order to print 3 times a string stored in the variable str, followed by its first 9 characters.
 
 6-concat.py - Complete a source code to print Welcome to Holberton School!
+
+7-edges.py - Print the first 3 letters, the last 2 letters and the middle word of a word in a source code

@@ -1,6 +1,4 @@
-#!/usr/bin/bash
-python - <<END
+#!/usr/bin/python3
 number = 3.14159
 num = "%.2f" % number
 print(f"Float: {num}")
-END

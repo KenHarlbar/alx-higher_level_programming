@@ -23,3 +23,5 @@
 11-pow.py - computes a to the power of b and return the value
 
 12-fizzbuzz.py - Fizz Buzz game
+
+100-print_tebahpla.py - prints the ASCII alphabet, in reverse order, alternating lowercase and uppercase (z in lowercase and Y in uppercase) , not followed by a new line.

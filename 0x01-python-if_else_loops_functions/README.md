@@ -25,3 +25,5 @@
 12-fizzbuzz.py - Fizz Buzz game
 
 100-print_tebahpla.py - prints the ASCII alphabet, in reverse order, alternating lowercase and uppercase (z in lowercase and Y in uppercase) , not followed by a new line.
+
+101-remove_char_at.py - creates a copy of the string, removing the character at the position n (not the Python way, the “C array index”).

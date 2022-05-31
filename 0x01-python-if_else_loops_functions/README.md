@@ -13,3 +13,5 @@
 6-print_comb3.py - prints all possible different combinations of two digits.
 
 7-islower.py - checks for lowercase character
+
+8-uppercase.py -  prints a string in uppercase followed by a new line.

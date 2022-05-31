@@ -21,3 +21,5 @@
 10-add.py - adds two integers and returns the result.
 
 11-pow.py - computes a to the power of b and return the value
+
+12-fizzbuzz.py - Fizz Buzz game

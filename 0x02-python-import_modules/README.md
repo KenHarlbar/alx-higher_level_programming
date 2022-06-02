@@ -5,3 +5,5 @@
 2-args.py - prints the number of and the list of its arguments.
 
 3-infinite_add.py - prints the result of the addition of all arguments.
+
+4-hidden_discovery.py - prints all the names defined by the compiled module hidden_4.pyc

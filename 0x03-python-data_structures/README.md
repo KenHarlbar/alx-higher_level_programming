@@ -17,3 +17,5 @@
 7-add_tuple.py - adds 2 tuples.
 
 8-multiple_returns.py
+
+9-max_integer.py

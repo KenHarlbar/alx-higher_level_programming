@@ -12,5 +12,5 @@ def print_matrix_integer(matrix=[[]]):
                 if column != 3:
                     print(" ", end="")
                 else:
-                    print("\n", end="")
+                    print()
             row += 1

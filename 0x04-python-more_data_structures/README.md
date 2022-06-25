@@ -17,3 +17,5 @@
 7. 7-update_dictionary.py -  replaces or adds key/value in a dictionary.
 
 8. 8-simple_delete.py - deletes a key in a dictionary.
+
+9. 9-multiply_by_2.py - returns a new dictionary with all values multiplied by 2

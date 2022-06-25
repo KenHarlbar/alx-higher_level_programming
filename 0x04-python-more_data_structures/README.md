@@ -26,4 +26,6 @@
 
 12. 12-roman_to_int.py - converts a Roman numeral to an integer.
 
-13. 100-weight_average.py - returns the weighted average of all integers tuple.
+100. 100-weight_average.py - returns the weighted average of all integers tuple.
+
+101. 101-square_matrix_map.py - computes the square value of all integers of a matrix using map

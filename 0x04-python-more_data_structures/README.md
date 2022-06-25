@@ -7,3 +7,5 @@
 2. 2-uniq_add.py - all unique integers in a list
 
 3. 3-common_elements.py - returns a set of common elements in two sets
+
+4. 4-only_diff_elements.py - returns a set of all elements present in only one set

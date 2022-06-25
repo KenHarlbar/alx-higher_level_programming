@@ -5,3 +5,5 @@
 1. 1-search_replace.py - replaces all occurrences of an element by another in a new list.
 
 2. 2-uniq_add.py - all unique integers in a list
+
+3. 3-common_elements.py - returns a set of common elements in two sets

@@ -9,3 +9,5 @@
 4. 3-safe_print_division.py - divides 2 integers and prints the result.
 
 5. 4-list_division.py - divides element by element 2 lists.
+
+6. 5-raise_exception.py - raises a type exception.

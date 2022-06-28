@@ -13,3 +13,5 @@
 5. 5-rectangle.py - Write a class Rectangle that defines a rectangle by width and height
 
 6. 6-rectangle.py - Write a class Rectangle that defines a rectangle by width and height
+
+7. 7-rectangle.py - Write a class Rectangle that defines a rectangle by width and height

@@ -1,5 +1,4 @@
-#!usr/bin/python3
-""" Module for class Square """
+#!/usr/bin/python3
 Rectangle = __import__('9-rectangle').Rectangle
 
 
@@ -16,4 +15,4 @@ class Square(Rectangle):
     def area(self):
         """ method to calculate area of square """
 
-        return self.__size ** 2
+        return super().area()

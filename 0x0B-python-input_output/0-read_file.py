@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" File operation module - 1 """
+""" File operation module - 0 """
 
 
 def read_file(filename=""):

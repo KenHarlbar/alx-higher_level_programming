@@ -42,7 +42,7 @@ class Student:
             for each in attr:
                 try:
                     new_dict[each] = dico[each]
-                except:
+                except Exception:
                     continue
             return new_dict
 

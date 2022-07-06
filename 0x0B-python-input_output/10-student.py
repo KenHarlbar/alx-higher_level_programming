@@ -24,6 +24,9 @@ class Student:
         """ Function that retrieves a dictionary representation
         of a Student instance
 
+        Args:
+            attr: key(s)
+
         Returns:
             dictionary representation of a Student Instance
         """

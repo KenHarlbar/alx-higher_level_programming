@@ -131,3 +131,14 @@ class Rectangle(Base):
 
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} \
 - {self.__width}/{self.__height}"
+
+    def update(self, *args):
+        """ Method that assigns an argument to each attribute
+        
+        Args:
+            args: 5 distinct values or more
+        """
+
+        list_atr = ['id', 'width', 'height', 'x', 'y']
+        for i in range(len(args)):
+            setattr(self, list_atr[i], args[i])

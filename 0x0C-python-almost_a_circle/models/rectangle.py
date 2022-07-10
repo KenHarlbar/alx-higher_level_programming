@@ -27,7 +27,7 @@ class Rectangle(Base):
         super().__init__(id)
     
     @property
-    def width(self, value):
+    def width(self):
         """ Width getter """
         return self.__width
     
@@ -47,7 +47,7 @@ class Rectangle(Base):
         self.__width = value
     
     @property
-    def height(self, value):
+    def height(self):
         """ Height getter """
         return self.__height
     
@@ -67,7 +67,7 @@ class Rectangle(Base):
         self.__height = value
     
     @property
-    def x(self, value):
+    def x(self):
         """ Position on x-axis getter """
         return self.__x
     
@@ -87,7 +87,7 @@ class Rectangle(Base):
         self.__x = value
     
     @property
-    def y(self, value):
+    def y(self):
         """ Position on y-axis getter """
         return self.__y
     
@@ -139,7 +139,7 @@ class Rectangle(Base):
             args: 5 distinct values or more
         """
 
-        if args is not None and len(args) is not 0:
+        if args != None and len(args) != 0:
             list_atr = ['id', 'width', 'height', 'x', 'y']
             for i in range(len(args)):
                 setattr(self, list_atr[i], args[i])

@@ -2,6 +2,7 @@
 """ Base module """
 from csv import list_dialects
 import json
+import os
 
 
 class Base:
@@ -58,3 +59,18 @@ class Base:
             dummy = cls(15)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        ''' Method that returns a list of instances '''
+
+        filename = f'{cls.__name__}.json'
+        if not os.path.exists(filename):
+            return []
+        with open(filename, 'r') as f:
+            list_str = f.read()
+        list_from_str = cls.from_json_string(list_str)
+        list_ins = []
+        for i in range(len(list_from_str)):
+            list_ins.append(cls.create(**list_from_str[i]))
+        return list_ins

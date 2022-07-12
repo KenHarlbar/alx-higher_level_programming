@@ -41,14 +41,14 @@ class Base:
         lists = cls.to_json_string(list_dict)
         with open(filename, 'w') as f:
             f.write(lists)
-    
+
     @staticmethod
     def from_json_string(json_string):
         ''' Method that returns the list representation of a
         json string'''
 
         return json.loads(json_string)
-    
+
     @classmethod
     def create(cls, **dictionary):
         ''' Method that create an instance of a class and

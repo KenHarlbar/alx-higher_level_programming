@@ -8,7 +8,7 @@ class TestBase(unittest.TestCase):
     ''' A class to test the functionality of base class '''
 
     def setUp(self):
-        Base.__nb_objects = 0
+        Base._Base__nb_objects = 0
 
     def test_id(self):
         ''' Method to test attribute "id" '''
@@ -18,3 +18,4 @@ class TestBase(unittest.TestCase):
         self.assertAlmostEqual(Base().id, 3)
         self.assertAlmostEqual(Base(12).id, 12)
         self.assertAlmostEqual(Base().id, 4)
+        self.assertAlmostEqual(Base('a').id, 'a')

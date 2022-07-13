@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ Module for test Square class """
+
 import unittest
 from io import StringIO
 from unittest import TestCase
@@ -9,6 +10,7 @@ from models.rectangle import Rectangle
 from models.base import Base
 
 
+
 class TestSquareMethods(unittest.TestCase):
     """ Suite to test Square class """
 
@@ -16,88 +18,116 @@ class TestSquareMethods(unittest.TestCase):
         """ Method invoked for each test """
         Base._Base__nb_objects = 0
 
-    def test_new_square(self):
-        """ Test new square """
-        new = Square(3)
-        self.assertEqual(new.size, 3)
-        self.assertEqual(new.width, 3)
-        self.assertEqual(new.height, 3)
-        self.assertEqual(new.x, 0)
-        self.assertEqual(new.y, 0)
-        self.assertEqual(new.id, 1)
+    def test_id(self):
+        ''' Method to test id of square '''
 
-    def test_new_square_2(self):
-        """ Test new square with all attrs """
-        new = Square(2, 5, 5, 4)
-        self.assertEqual(new.size, 2)
-        self.assertEqual(new.width, 2)
-        self.assertEqual(new.height, 2)
-        self.assertEqual(new.x, 5)
-        self.assertEqual(new.y, 5)
-        self.assertEqual(new.id, 4)
+        temp = Square(3)
+        self.assertEqual(temp.id, 1)
+        temp = Square(2, 5, 5, 4)
+        self.assertEqual(temp.id, 4)
 
-    def test_new_squares(self):
-        """ Test new squares """
-        new = Square(1, 1)
-        new2 = Square(1, 1)
-        self.assertEqual(False, new is new2)
-        self.assertEqual(False, new.id == new2.id)
+    def test_width(self):
+        ''' Method to test width of square '''
+
+        temp = Square(3)
+        self.assertEqual(temp.width, 3)
+        temp = Square(2, 5, 5, 4)
+        self.assertEqual(temp.width, 2)
+
+    def test_height(self):
+        ''' Method to test height of square '''
+
+        temp = Square(3)
+        self.assertEqual(temp.height, 3)
+        temp = Square(2, 5, 5, 4)
+        self.assertEqual(temp.height, 2)
+
+    def test_x(self):
+        ''' Method to test x of square '''
+
+        temp = Square(3)
+        self.assertEqual(temp.x, 0)
+        temp = Square(2, 5, 5, 4)
+        self.assertEqual(temp.x, 5)
+
+    def test_y(self):
+        ''' Method to test y of square '''
+
+        temp = Square(3)
+        self.assertEqual(temp.y, 0)
+        temp = Square(2, 5, 5, 4)
+        self.assertEqual(temp.y, 5)
+
+    def test_object(self):
+        """ Test if instances with the same value are the
+        same object """
+
+        temp1 = Square(1, 1)
+        temp2 = Square(1, 1)
+        self.assertEqual(False, temp1 is temp2)
+        self.assertEqual(False, temp1.id == temp2.id)
 
     def test_is_Base_instance(self):
         """ Test Square is a Base instance """
-        new = Square(1)
-        self.assertEqual(True, isinstance(new, Base))
+
+        temp = Square(1)
+        self.assertEqual(True, isinstance(temp, Base))
 
     def test_is_Rectangle_instance(self):
         """ Test Square is a Rectangle instance """
-        new = Square(1)
-        self.assertEqual(True, isinstance(new, Rectangle))
+
+        temp = Square(1)
+        self.assertEqual(True, isinstance(temp, Rectangle))
 
     def test_incorrect_amount_attrs(self):
         """ Test error raise with no args passed """
+
         with self.assertRaises(TypeError):
-            new = Square()
+            temp = Square()
+            temp = Square(-1)
+            temp = Square((2+3j))
+            temp = Square('a')
 
     def test_incorrect_amount_attrs_1(self):
         """ Test error raised with no args passed """
         with self.assertRaises(TypeError):
-            new = Square(1, 1, 1, 1, 1)
+            temp = Square(1, 1, 1, 1, 1)
 
-    def test_access_private_attrs(self):
+    def test_access_private_attrs_width(self):
         """ Trying to access to a private attribute """
         new = Square(1)
         with self.assertRaises(AttributeError):
             new.__width
 
-    def test_access_private_attrs_2(self):
+    def test_access_private_attrs_height(self):
         """ Trying to access to a private attribute """
         new = Square(1)
         with self.assertRaises(AttributeError):
             new.__height
 
-    def test_access_private_attrs_3(self):
+    def test_access_private_attrs_x(self):
         """ Trying to access to a private attribute """
         new = Square(1)
         with self.assertRaises(AttributeError):
             new.__x
 
-    def test_access_private_attrs_4(self):
+    def test_access_private_attrs_y(self):
         """ Trying to access to a private attribute """
         new = Square(1)
         with self.assertRaises(AttributeError):
             new.__y
 
-    def test_valide_attrs(self):
+    def test_valid_attrs_size(self):
         """ Trying to pass a string value """
         with self.assertRaises(TypeError):
             new = Square("2", 2, 2, 2)
 
-    def test_valide_attrs_2(self):
+    def test_valide_attrs_x(self):
         """ Trying to pass a string value """
         with self.assertRaises(TypeError):
             new = Square(2, "2", 2, 2)
 
-    def test_valide_attrs_3(self):
+    def test_valide_attrs_y(self):
         """ Trying to pass a string value """
         with self.assertRaises(TypeError):
             new = Square(2, 2, "2", 2)
@@ -107,12 +137,12 @@ class TestSquareMethods(unittest.TestCase):
         with self.assertRaises(ValueError):
             new = Square(0)
 
-    def test_value_attrs_2(self):
+    def test_value_attrs_x(self):
         """ Trying to pass invalid values """
         with self.assertRaises(ValueError):
             new = Square(1, -1)
 
-    def test_value_attrs_3(self):
+    def test_value_attrs_y(self):
         """ Trying to pass invalid values """
         with self.assertRaises(ValueError):
             new = Square(1, 1, -1)
@@ -136,8 +166,8 @@ class TestSquareMethods(unittest.TestCase):
 
     def test_display(self):
         """ Test string printed """
-        r1 = Square(2)
-        res = "##\n##\n"
+        r1 = Square(3)
+        res = "###\n###\n###\n"
         with patch('sys.stdout', new=StringIO()) as str_out:
             r1.display()
             self.assertEqual(str_out.getvalue(), res)

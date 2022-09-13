@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-    A script that lists all states from the database hbtn_0e_0_usa
+A script that lists all states from the database hbtn_0e_0_usa
 
-    Args:
-        username (str): The MySQL username
-        password (str): The MySQL password
-        database (str): The database name
+Args:
+    username (str): The MySQL username
+    password (str): The MySQL password
+    database (str): The database name
 """
 import sys
 import MySQLdb

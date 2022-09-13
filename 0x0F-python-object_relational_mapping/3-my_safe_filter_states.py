@@ -24,9 +24,9 @@ def create_db(username, password, db_name):
     return db
 
 
-def check_name(name):
+def state_with_highest_len():
     """
-    Checks if the name is a valid string
+    Returns the state with the highest length
     """
     db = create_db(sys.argv[1], sys.argv[2], sys.argv[3])
     cur = db.cursor()
@@ -36,9 +36,21 @@ def check_name(name):
     cur.close()
     db.close()
 
+    max_len = 0
     for state in states:
-        if len(name) == len(state[1]):
-            return True
+        if len(state[1]) > max_len:
+            max_len = len(state[1])
+    return max_len
+
+
+def check_name(name):
+    """
+    Checks if the name is a valid string
+    """
+    max_len = state_with_highest_len()
+    if len(name) > max_len:
+        return False
+    return True
     
 
 if __name__ == '__main__':

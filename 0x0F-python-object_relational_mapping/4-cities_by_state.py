@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 A script that lists all cities from the database hbtn_0e_4_usa
 

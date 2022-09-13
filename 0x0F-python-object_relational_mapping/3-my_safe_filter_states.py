@@ -51,7 +51,7 @@ def check_name(name):
     if len(name) > max_len:
         return False
     return True
-    
+
 
 if __name__ == '__main__':
     username = sys.argv[1]

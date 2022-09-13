@@ -77,3 +77,5 @@ if __name__ == '__main__':
                 if city != cities[-1]:
                     print(", ", end="")
             print()
+        else:
+            print()

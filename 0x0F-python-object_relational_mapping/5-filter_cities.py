@@ -64,15 +64,16 @@ if __name__ == '__main__':
         state_id = "SELECT id FROM states WHERE name = '{}'".format(name)
         cur.execute(state_id)
         state_id = cur.fetchone()
-        state_id = state_id[0]
-        query = "SELECT * FROM cities WHERE state_id = {}".format(state_id)
-        cur.execute(query)
-        cities = cur.fetchall()
-        cur.close()
-        db.close()
+        if state_id:
+            state_id = state_id[0]
+            query = "SELECT * FROM cities WHERE state_id = {}".format(state_id)
+            cur.execute(query.format(state_id))
+            cities = cur.fetchall()
+            cur.close()
+            db.close()
 
-        for city in cities:
-            print(city[2], end="")
-            if city != cities[-1]:
-                print(", ", end="")
-        print()
+            for city in cities:
+                print(city[2], end="")
+                if city != cities[-1]:
+                    print(", ", end="")
+            print()

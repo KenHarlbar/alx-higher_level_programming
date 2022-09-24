@@ -3,8 +3,10 @@
 and displays the value of the X-Request-Id variable found in
 the header of the response """
 from urllib.request import urlopen
+import sys
 
 
-with urlopen('https://alx-intranet.hbtn.io/status') as response:
+url = sys.argv[1]
+with urlopen(url) as response:
     body = response.info()
     print(body.get('X-Request-Id'))
